@@ -1,0 +1,13 @@
+[package]
+name = "todo_application"
+version = "0.1.0"
+edition = "2018"
+authors = ["Alex Howson (Skippy)"]
+description = "A simple todo application to learn the GTK4 toolset"
+homepage = ""
+repository = ""
+license = "GPLv3"
+readme = "README.md"
+
+[dependencies]
+gtk = { version = "0.3.1", package = "gtk4" }
