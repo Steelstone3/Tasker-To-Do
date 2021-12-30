@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-  <object class="GtkApplicationWindow" id="window">
+  <object class="GtkApplicationWindow" id="tasker">
     <property name="height-request">360</property>
     <property name="width-request">360</property>
     <property name="title" translatable="yes">Tasker - To Do</property>
@@ -13,7 +13,7 @@
         <property name="margin-end">12</property>
         <property name="spacing">6</property>
         <child>
-          <object class="GtkEntry" id="entry"/>
+          <object class="GtkEntry" id="task_entry"/>
         </child>
         <child>
           <object class="GtkScrolledWindow">
@@ -22,7 +22,7 @@
             <property name="min-content-height">360</property>
             <property name="vexpand">true</property>
             <child>
-              <object class="GtkListView" id="list_view"/>
+              <object class="GtkListView" id="tasks_list_view"/>
             </child>
           </object>
         </child>
