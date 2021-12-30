@@ -1,9 +1,9 @@
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow};
 
-//use crate::view::string_resources::string_resources::{APPLICATION_ID, APPLICATION_TITLE};
-
+mod model;
 mod view;
+mod presenter;
 
 fn main() {
     let app = Application::builder().application_id("org.tasker.todo").build();
@@ -13,7 +13,7 @@ fn main() {
 }
 
 pub fn build_ui(app: &Application) {
-    let builder = gtk::Builder::from_string(include_str!("tasker.ui"));
+    let builder = gtk::Builder::from_string(include_str!("./ui/tasker.ui"));
 
     let window: ApplicationWindow = builder.object("tasker").expect("Could not get object `window` from builder.");
     
