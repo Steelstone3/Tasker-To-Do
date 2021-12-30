@@ -16,8 +16,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    #- name: Update Build Server
+    #  run: sudo apt-get update
     - name: Dependencies
-      run: [sudo apt-get update, sudo apt-get install -y libgtk-4 build-essential]
+      run: sudo apt-get install -y libgtk-4 build-essential
     - name: Build
       run: cargo build --verbose
     - name: Run tests
