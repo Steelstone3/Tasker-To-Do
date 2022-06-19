@@ -1,3 +1,6 @@
+mod tasker;
+mod task;
+
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow};
 
@@ -9,7 +12,7 @@ fn main() {
 }
 
 pub fn build_ui(app: &Application) {
-    let builder = gtk::Builder::from_string(include_str!("./ui/tasker.ui"));
+    let builder = gtk::Builder::from_string(include_str!("tasker/tasker.ui"));
 
     let window: ApplicationWindow = builder.object("tasker").expect("Could not get object `window` from builder.");
     
