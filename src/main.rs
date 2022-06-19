@@ -1,10 +1,6 @@
 use gtk::prelude::*;
 use gtk::{Application, ApplicationWindow};
 
-mod model;
-mod view;
-mod presenter;
-
 fn main() {
     let app = Application::builder().application_id("org.tasker.todo").build();
 
