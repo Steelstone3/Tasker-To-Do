@@ -1,5 +1,5 @@
-use crate::AppMsg;
-use crate::TaskWidgets;
+use crate::application::task_state::AppMsg;
+use crate::application::task_view::TaskWidgets;
 use gtk::prelude::{BoxExt, CheckButtonExt};
 use relm4::factory::{FactoryPrototype, FactoryVec};
 use relm4::{gtk, send, Sender, WidgetPlus};
