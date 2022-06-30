@@ -1,5 +1,6 @@
 mod application;
 
+use crate::application::task_state::AppMsg;
 use crate::application::task_view::TaskWidgets;
 use crate::application::task::Task;
 use gtk::prelude::{
@@ -7,11 +8,6 @@ use gtk::prelude::{
 };
 use relm4::factory::{FactoryVec};
 use relm4::{gtk, send, AppUpdate, Model, RelmApp, Sender, WidgetPlus, Widgets};
-
-pub enum AppMsg {
-    SetCompleted((usize, bool)),
-    AddEntry(String),
-}
 
 struct AppModel {
     tasks: FactoryVec<Task>,
