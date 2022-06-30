@@ -16,11 +16,11 @@ struct TaskWidgets {
 }
 
 impl FactoryPrototype for Task {
-    type View = gtk::ListBox;
-    type Msg = AppMsg;
     type Factory = FactoryVec<Task>;
     type Widgets = TaskWidgets;
     type Root = gtk::Box;
+    type View = gtk::ListBox;
+    type Msg = AppMsg;
 
     fn init_view(&self, key: &usize, sender: Sender<Self::Msg>) -> Self::Widgets {
         let hbox = gtk::Box::builder()
@@ -97,7 +97,7 @@ impl Widgets<AppModel, ()> for AppWidgets {
     view! {
         main_window = gtk::ApplicationWindow {
             set_width_request: 360,
-            set_title: Some("To-Do"),
+            set_title: Some("Tasker To Do"),
 
             set_child = Some(&gtk::Box) {
                 set_orientation: gtk::Orientation::Vertical,
