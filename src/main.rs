@@ -1,6 +1,6 @@
 mod application;
 
-use crate::application::task::TaskWidgets;
+use crate::application::task_view::TaskWidgets;
 use crate::application::task::Task;
 use gtk::prelude::{
     BoxExt, CheckButtonExt, EntryBufferExtManual, EntryExt, GtkWindowExt, OrientableExt, WidgetExt,
