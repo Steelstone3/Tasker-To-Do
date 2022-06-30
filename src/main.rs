@@ -1,16 +1,14 @@
+mod application;
+
+use crate::application::task::Task;
 use gtk::prelude::{
     BoxExt, CheckButtonExt, EntryBufferExtManual, EntryExt, GtkWindowExt, OrientableExt, WidgetExt,
 };
 use relm4::factory::{FactoryPrototype, FactoryVec};
 use relm4::{gtk, send, AppUpdate, Model, RelmApp, Sender, WidgetPlus, Widgets};
 
-struct Task {
-    name: String,
-    completed: bool,
-}
-
 #[derive(Debug)]
-struct TaskWidgets {
+pub struct TaskWidgets {
     label: gtk::Label,
     hbox: gtk::Box,
 }
@@ -58,7 +56,7 @@ impl FactoryPrototype for Task {
     }
 }
 
-enum AppMsg {
+pub enum AppMsg {
     SetCompleted((usize, bool)),
     AddEntry(String),
 }
