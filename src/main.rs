@@ -1,5 +1,6 @@
 mod application;
 
+use crate::application::task::TaskWidgets;
 use crate::application::task::Task;
 use gtk::prelude::{
     BoxExt, CheckButtonExt, EntryBufferExtManual, EntryExt, GtkWindowExt, OrientableExt, WidgetExt,
@@ -7,11 +8,6 @@ use gtk::prelude::{
 use relm4::factory::{FactoryPrototype, FactoryVec};
 use relm4::{gtk, send, AppUpdate, Model, RelmApp, Sender, WidgetPlus, Widgets};
 
-#[derive(Debug)]
-pub struct TaskWidgets {
-    label: gtk::Label,
-    hbox: gtk::Box,
-}
 
 impl FactoryPrototype for Task {
     type Factory = FactoryVec<Task>;
